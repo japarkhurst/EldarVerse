@@ -21,5 +21,5 @@ for i,name in enumerate(input.split('\n')):
         continue
     count = len(set(name.lower()))
     discount = .05*count
-    percent = (1-discount)*100
+    percent = int(round((1-discount)*100))
     print(f'Case #{i}: {percent}')
