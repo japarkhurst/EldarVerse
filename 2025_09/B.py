@@ -1,7 +1,7 @@
 input = '''2
 2 0
 3 2'''
-
+W,L = 'W','L'
 cases = []
 for i,row in enumerate(input.split('\n')):
     if i == 0:
@@ -20,3 +20,21 @@ for i,(N,K) in enumerate(cases,1):
             if H != A:
                 games.append((H,A))
     print(games)
+gameCount = cnt
+current = [[W]*gameCount]
+cumulative = []
+for i in range(N):
+    print(i)
+    print(current)
+    cumulative += current
+    current = cumulative[::]
+    print(cumulative)
+    new_results = []
+    for j in range(len(current)):
+        result = current[j][::]
+        result[i] = L
+        new_results.append(result)
+        print(f'{result=}')
+    current = new_results
+    print(current)
+    
