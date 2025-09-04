@@ -15,8 +15,8 @@ for i,(N,K) in enumerate(cases,1):
     cnt = N * (N-1)
     print(f'Games: {cnt}')
     games = []
-    for H in range(1,cnt+1):
-        for A in range(1,cnt+1):
+    for H in range(1,N+1):
+        for A in range(1,N+1):
             if H != A:
                 games.append((H,A))
     print(games)
