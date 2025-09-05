@@ -28,5 +28,5 @@ for i,row in enumerate(input.split('\n')):
     if i == 0:
         continue
     N = int(row)
-    
+
         
