@@ -1,0 +1,31 @@
+Games: 2
+sparseCount=2
+Games: 6
+sparseCount=18
+Games: 2
+sparseCount=2
+Games: 2
+sparseCount=0
+Games: 6
+sparseCount=54
+Games: 6
+sparseCount=6
+Games: 12
+sparseCount=3944
+Games: 12
+sparseCount=3944
+Games: 12
+sparseCount=2312
+Games: 12
+sparseCount=1256
+Games: 12
+sparseCount=384
+Games: 12
+sparseCount=48
+Games: 20
+sparseCount=1040840
+Games: 20
+sparseCount=810240
+Games: 20
+sparseCount=562480
+Games: 20
