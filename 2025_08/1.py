@@ -27,4 +27,7 @@ for i,line in enumerate(input.split('\n')):
         newline = "".join([replaceDict.get(_,_) for _ in line])
         print(f'{newline} ({s})')
         
-  
+for i,line in enumerate(input.split('\n')):
+    if i == 0:
+        continue
+    print(f'Case #{i}:')
