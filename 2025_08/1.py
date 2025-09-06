@@ -1,3 +1,10 @@
+import string
+
+uppercase = string.ascii_uppercase
+lowercase = string.ascii_lowercase
+
+
+
 input = '''10
 Ftq gzqjmyuzqp xurq ue zaf iadft xuhuzs
 Znk cnurk oy mxkgzkx zngt znk yas ul ozy vgxzy
