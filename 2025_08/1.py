@@ -18,3 +18,8 @@ Kyzj zj wzev
 K vjkpm vjgtghqtg K ogog'''
 
 for i,line in enumerate(input.split('\n')):
+    if i == 0:
+        continue
+    for s in range(26):
+        
+  
