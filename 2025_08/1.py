@@ -25,6 +25,6 @@ for i,line in enumerate(input.split('\n')):
         newLowers = lowers[s:] + lowers[:s]
         replaceDict = dict(zip(newUppers,uppers)) | dict(zip(newLowers,lowers))
         newline = "".join([replaceDict.get(_,_) for _ in line])
-        print(newline)
+        print(f'{newline} ({s})')
         
   
