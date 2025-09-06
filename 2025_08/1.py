@@ -1,7 +1,7 @@
 import string
 
-uppercase = string.ascii_uppercase
-lowercase = string.ascii_lowercase
+uppers = string.ascii_uppercase
+lowers = string.ascii_lowercase
 
 
 
@@ -21,5 +21,10 @@ for i,line in enumerate(input.split('\n')):
     if i == 0:
         continue
     for s in range(26):
+        newUppers = uppers[s:] + uppers[:s]
+        newLowers = lowers[s:] + lowers[:s]
+        replaceDict = dict(zip(newUppers,uppers)) | dict(zip(newLowers,lowers))
+        newline = "".join([replaceDict.get(_,_) for _ in line])
+        print(newline)
         
   
