@@ -35,15 +35,20 @@ for i,row in enumerate(input.split('\n')):
         options = set()
         maxMutualCount = -1
         for y,yF in friends.items():
-            mutualCount = len([_ for _ in yF if _ != x and _ in xF])
+            if x == y or y in xF:
+                continue
+            mutualCount = len([_ for _ in yF if _ in xF])
             if mutualCount > maxMutualCount:
                 options = {y}
+                maxMutualCount = mutualCount
             elif mutualCount == maxMutualCount:
                 options.add(y)
+        #print(f'{options=}')
         suggest = min(options)
         print(suggest)
     else:
         case += 1
         print(f'Case #{case}')
+    #print(friends)
     
         
