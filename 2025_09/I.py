@@ -1,0 +1,5 @@
+print(bool("abc" < "abd"))
+print(bool("abc" < "ba"))
+print(bool("abc" < "abcd"))
+print(bool("abc" > "aaa"))
+print(bool("abc" > "a"))
