@@ -14,7 +14,7 @@ SUGGEST samurai'''
 import string
 lowers = string.ascii_lowercase
 from collections import defaultdict
-friends = defaultdict(set())
+friends = defaultdict(set)
 case = 0
 for i,row in enumerate(input.split('\n')):
     if i < 1:
@@ -35,7 +35,7 @@ for i,row in enumerate(input.split('\n')):
         options = set()
         maxMutualCount = -1
         for y,yF in friends.items():
-            mutualCount = len([_ for _ in yF if _ in xF])
+            mutualCount = len([_ for _ in yF if _ != x and _ in xF])
             if mutualCount > maxMutualCount:
                 options = {y}
             elif mutualCount == maxMutualCount:
