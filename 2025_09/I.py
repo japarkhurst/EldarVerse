@@ -26,8 +26,18 @@ for i,row in enumerate(input.split('\n')):
         friends[f1].discard(f2)
         friends[f2].discard(f1)
     elif row[0] == 'S':
-        _,f = row.split(' ')
-        fList = []
+        _,x = row.split(' ')
+        xF = friends[x]
+        options = set()
+        maxMutualCount = -1
+        for y,yF in friends.items():
+            mutualCount = len([_ for _ in yF if _ in xF])
+            if mutualCount > maxMutualCount:
+                options = {y}
+            elif mutualCount == maxMutualCount:
+                options.add(y)
+        suggest = min(options)
+        print(suggest)
     else:
         case += 1
         print(f'Case #{case}')
