@@ -11,11 +11,15 @@ SUGGEST samurai
 ADD samurai gojira
 SUGGEST samurai'''
 
+import string
+lowers = string.ascii_lowercase
 from collections import defaultdict
 friends = defaultdict(set())
 case = 0
 for i,row in enumerate(input.split('\n')):
     if i < 1:
+        continue
+    elif row[0] in lowers:
         continue
     elif row[0] == 'A':
         _,f1,f2 = row.split(' ')
