@@ -16,9 +16,10 @@ for i,word in enumerate(input.split('\n')):
         words.add(word)
 sequence = input.split('\n')[-1]
 
+print('Case #1:')
 search = []
 for s in sequence:
-    if search == '<':
+    if s == '<':
         search.pop()
     else:
         search.append(s)
