@@ -19,7 +19,10 @@ case = 1
 for i,row in enumerate(input.split('\n')):
     if i == 0:
         continue
-    lIndex = row.index('>')
+    try:
+        lIndex = row.index('>')
+    except:
+        continue
     rIndex = row.index('<')
     if lIndex and rIndex:
         token = row[lIndex+1:rIndex]
