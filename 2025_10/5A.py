@@ -16,7 +16,15 @@ for i,row in enumerate(input.split('\n')):
         ingredients= {}
         good_cnt = 0
     elif row.startswith('='): # test each recipe
-        recipe = row
+        good = True
+        for ing_str in row.strip('= ').split(', '):
+            ing,cnt = ing_str.split(' (')
+            cnt = int(cnt.strip(')'))
+            if cnt > ingredients.get(ing,0):
+                good = False
+                break
+        if good:
+            good_cnt += 1
     else: # get ingredients
         ing,cnt = row.split(' (')
         ingredients[ing] = int(cnt.strip(')'))
