@@ -9,17 +9,17 @@ owlet's wing (3)
 
 case = 0
 for i,row in enumerate(input.split('\n')):
-    if i == 0:
+    if i == 0: 
         continue
-    elif '(' not in row:
+    elif '(' not in row: # reset for each case
         case += 1
         ingredients= {}
         good_cnt = 0
-    elif row.startswith('='):
+    elif row.startswith('='): # test each recipe
         recipe = row
-    else:
+    else: # get ingredients
         ing,cnt = row.split(' (')
         ingredients[ing] = int(cnt.strip(')'))
 
-        continue
+        
     
